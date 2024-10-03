@@ -57,6 +57,7 @@
       const Account = { balance: 1000 };
       const withdrawalMessage = withdraw(myAccount, 200);
       console.log(withdrawalMessage); // Output: "Withdrawal successful. New balance: 2300"
+      
 
       // Function to calculate compound interest
       function calculateCompoundInterest(p, r, t) {
