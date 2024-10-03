@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object constructor</title>
+</head>
+<body>
+    <h1>Object Constructors</h1>
+    <div>
+        <p id="info"></p>
+        <script>
+            // Constructor Function for book Objects
+            function book(title, author, pageNumber) 
+            {
+                this.title = title;
+                this.author = author;
+                this.pageNumber = pageNumber;
+                
+                // toString() method within object constructor to control how the object is represented as a string.
+                this.toString = function() {
+                return `Title: ${this.title}, Author: ${this.author}, Number of Pages: ${this.pageNumber}`;
+                };
+            }
+           
+                // Create a book object
+                let book1 = new book("Harry Potter and the Sorcerer's Stone", "JK Rowling", "309 pages");
+
+            // Display the book 
+            document.getElementById("info").innerHTML = "New book: " + book1;
+
+        </script>
+    </div><br><br>
+
+    <h1>Objects and Math</h1>
+    <div>
+        <p id="result"></p>
+        <script>
+            // constructor function for account object
+            function account(accountNumber, balance, owner) 
+            {
+                this.accountNumber = accountNumber;
+                this.balance = balance;
+                this.owner = owner;
+
+                // toString() method within object constructor to control how the object is represented as a string.
+                this.toString = function() {
+                return `Account Number: ${this.accountNumber}, Balance: ${this.balance}, Owner: ${this.owner}`;
+                };  
+            }
+                
+                // Create an account object with account information
+                let account1 =  new account("001", "$3000", "Zab");
+            
+            // Display the account
+            document.getElementById("result").innerHTML = "New account: " + account1;
+
+            
+            
+            
+        </script>
+    </div>
+</body>
+</html>
